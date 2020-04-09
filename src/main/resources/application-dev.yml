@@ -1,0 +1,30 @@
+server:
+  port: 8888
+  context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      master:
+        name: master
+        driver-class-name:  com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/chenlei?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&allowMultiQueries=true
+        username: root
+        password: 123456
+      messagebase:
+        name: messagebase
+        driver-class-name:  com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&allowMultiQueries=true
+        username: root
+        password: 123456
+
+  
+constants: #  公共参数
+  #日志目录、级别
+  logPath: /home/timeTaskLog
+  logLevel: DEBUG
+
+
